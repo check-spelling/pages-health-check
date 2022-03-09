@@ -1,0 +1,17 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# regex
+\bmatch\((?:/.*/|%r\{.*\})i?\)
+\bg?sub\(/.*/,\s*"[^"]*"\)
+
+# sha
+"[0-9a-f]{40}"
+
+# version suffix <word>v#
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
+
+# acceptable duplicates
+\s(long|LONG) \g{-1}\s
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
